@@ -1,14 +1,56 @@
 import os
-prompt = int(input("""
+
+def install_package(command):
+    print(f"Installing with: {command}")
+    os.system(command)
+
+print("""
 What do you want to install
-
+-office-
 1- libreoffice
-2- test.py
+2- GIMP
+-web-
+3- Firefox
+4- Chromium
+-communication-
+5- Thunderbird
+6- FileZilla
+-multimedia-
+7- VLC
+8- Audacity
+9- Kdenlive
+-programming-
+10- VScode
+11- Nvim 'configured to Lazyvim'
+-gaming-
+12- Steam
+13- Retroarch
+""")
 
-> """))
+try:
+    prompt = int(input("> "))
+except ValueError:
+    print("Please enter a valid number!")
+    exit(1)
 
-if prompt == 1:
-    os.system("sudo pacman -S libreoffice-fresh")
+pacman_packages = {
+    1: "sudo pacman -S libreoffice-fresh",
+    2: "sudo pacman -S gimp",
+    3: "sudo pacman -S firefox",
+    4: "sudo pacman -S chromium",
+    5: "sudo pacman -S thunderbird",
+    6: "sudo pacman -S filezilla",
+    7: "sudo pacman -S vlc",
+    8: "sudo pacman -S audacity",
+    9: "sudo pacman -S kdenlive",
+    10: "sudo pacman -S code",
+    11: "sudo pacman -S neovim",
+    12: "sudo pacman -S steam",
+    13: "sudo pacman -S retroarch"
+}
+
+if prompt in pacman_packages:
+    install_package(pacman_packages[prompt])
 else:
-    os.system("curl 172.233.44.224/AutoInstaller/test.py >> test.py")
+    print("Invalid selection, please choose a number from the list.")
 
