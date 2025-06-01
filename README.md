@@ -1,4 +1,4 @@
-# AutoInstaller (v0.1)
+# AutoInstaller (v0.2)
 
 This program allows you to download some apps easily.
 
