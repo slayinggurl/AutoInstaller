@@ -22,7 +22,7 @@ What do you want to install
 8- Audacity
 9- Kdenlive
 -programming-
-10- VScode
+10- VScode (code)
 11- Nvim 'configured to Lazyvim'
 -gaming-
 12- Steam
