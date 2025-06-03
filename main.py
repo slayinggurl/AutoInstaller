@@ -23,7 +23,7 @@ What do you want to install
 9- Kdenlive
 -programming-
 10- VScode (code)
-11- Nvim 'configured to Lazyvim'
+11- Nvim
 -gaming-
 12- Steam
 13- Retroarch
